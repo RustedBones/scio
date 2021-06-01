@@ -17,7 +17,7 @@ jobs:
       - name: cache SBT
         uses: coursier/cache-action@v5
       - name: java ${{matrix.java}} setup
-        uses: olafurpg/setup-scala@v10
+        uses: olafurpg/setup-scala@v11
       - run: sbt scio-repl/assembly
       - name: Create Release
         id: create_release
@@ -46,7 +46,7 @@ jobs:
       - name: Cache SBT
         uses: coursier/cache-action@v5
       - name: Setup Java and Scala
-        uses: olafurpg/setup-scala@v10
+        uses: olafurpg/setup-scala@v11
       - name: Setup project
         run: scripts/gha_setup.sh
       - name: Build documentation
